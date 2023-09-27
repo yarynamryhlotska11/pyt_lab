@@ -1,36 +1,36 @@
 import math
 
 
-def add(num1, num2):
-    return num1 + num2
+def add(number1, number2):
+    return number1 + number2
 
 
-def subtract(num1, num2):
-    return num1 - num2
+def subtract(number1, number2):
+    return number1 - number2
 
 
-def multiply(num1, num2):
-    return num1 * num2
+def multiply(number1, number2):
+    return number1 * number2
 
 
-def divide(num1, num2):
-    if num2 == 0:
+def divide(number1, number2):
+    if number2 == 0:
         raise ArithmeticError("Error! Dividing by zero isn't possible")
-    return num1 / num2
+    return number1 / number2
 
 
-def raise_num_to_power(num1, num2):
-    return num1 ** num2
+def raise_num_to_power(number1, number2):
+    return number1 ** number2
 
 
-def calculate_square_root(num):
-    if num < 0:
+def calculate_square_root(number):
+    if number < 0:
         raise ArithmeticError("Error! The square root of a negative number cannot be calculated")
-    return math.sqrt(num)
+    return math.sqrt(number)
 
 
-def calculate_remainder_from_division(num1, num2):
-    return num1 % num2
+def calculate_remainder_from_division(number1, number2):
+    return number1 % number2
 
 
 def view_history():
