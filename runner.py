@@ -1,63 +1,5 @@
-import math
-
-
-def add(number1, number2):
-    return number1 + number2
-
-
-def subtract(number1, number2):
-    return number1 - number2
-
-
-def multiply(number1, number2):
-    return number1 * number2
-
-
-def divide(number1, number2):
-    if number2 == 0:
-        raise ArithmeticError("Error! Dividing by zero isn't possible")
-    return number1 / number2
-
-
-def raise_num_to_power(number1, number2):
-    return number1 ** number2
-
-
-def calculate_square_root(number):
-    if number < 0:
-        raise ArithmeticError("Error! The square root of a negative number cannot be calculated")
-    return math.sqrt(number)
-
-
-def calculate_remainder_from_division(number1, number2):
-    return number1 % number2
-
-
-def view_history():
-    if calculations_history.__len__() == 0:
-        print("The history is empty")
-    else:
-        print("Calculation history:")
-        for i in calculations_history:
-            for j in i:
-                if isinstance(j, float):
-                    print(str(round(j, decimal_places)) + " ", end="")
-                else:
-                    print(str(j) + " ", end="")
-            print()
-
-
-def view_settings():
-    print("\tSettings:")
-    print("\tDecimal places are " + str(decimal_places))
-
-
-def change_decimal_places(value):
-    if value <= 0:
-        raise ArithmeticError("Error! Decimal digits must be greater than zero")
-    global decimal_places
-    decimal_places = value
-
+from calculator import *
+from console_output import *
 
 calculations_history = []
 decimal_places = 2
@@ -102,7 +44,7 @@ while True:
                     result = calculate_remainder_from_division(first_number, second_number)
 
             calculations_history += [(first_number, action, second_number, "=", result)]
-            print("Result is " + str(round(result, decimal_places)) + "\n")
+            print("Result: " + str(round(result, decimal_places)) + "\n")
         except ArithmeticError as e:
             print(str(e) + "\n")
     elif input_action == "√":
@@ -115,7 +57,7 @@ while True:
         except ArithmeticError as e:
             print(str(e) + "\n")
     elif input_action == "1":
-        view_history()
+        view_history(calculations_history, decimal_places)
         print()
     elif input_action == "2":
         while True:
@@ -128,7 +70,7 @@ while True:
             inner_input_value = str(input("\tYour option is "))
 
             if inner_input_value == "1":
-                view_settings()
+                view_settings(decimal_places)
                 print()
             elif inner_input_value == "2":
                 new_value = int(input("\tEnter a new value for decimal places: "))
