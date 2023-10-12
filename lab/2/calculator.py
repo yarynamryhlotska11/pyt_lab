@@ -19,9 +19,12 @@ class Calculator:
         return f"Settings:\nDecimal places are {self.decimal_places}"
 
     def change_decimal_places(self, value):
-        if value <= 0:
-            raise ValueError("Decimal places must be greater than zero")
-        self.decimal_places = value
+        try:
+            if value <= 0:
+                raise ValueError("Error! Decimal places must be greater than zero")
+            self.decimal_places = value
+        except ValueError as e:
+            return str(e)
 
     def calculate(self, operator, num1, num2):
         try:
@@ -33,7 +36,7 @@ class Calculator:
                 result = num1 * num2
             elif operator == "/":
                 if num2 == 0:
-                    raise ValueError("Division by zero is not allowed")
+                    raise ValueError("Error! Division by zero is not allowed")
                 result = num1 / num2
             elif operator == "^":
                 result = num1 ** num2
@@ -41,10 +44,10 @@ class Calculator:
                 result = num1 % num2
             elif operator == "√":
                 if num1 < 0:
-                    raise ValueError("Square root of a negative number is not allowed")
+                    raise ValueError("Error! Square root of a negative number is not allowed")
                 result = math.sqrt(num1)
             else:
-                raise ValueError("Invalid operator")
+                raise ValueError("Error! Invalid operator")
 
             calculation = (num1, operator, num2, "=", round(result, self.decimal_places))
             self.calculations_history.append(calculation)
