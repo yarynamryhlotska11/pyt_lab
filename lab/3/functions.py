@@ -39,8 +39,3 @@ def write_in_file(file_path, text) -> None:
     with open(file_path, "w", encoding="utf-8") as file:
         file.write(text)
 
-
-# Function to read text from file
-def read_from_file(file_path) -> str:
-    with open(file_path, "r", encoding="utf-8") as file:
-        return file.read()

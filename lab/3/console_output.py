@@ -1,4 +1,3 @@
-
 import functions
 
 if __name__ == '__main__':
@@ -29,6 +28,7 @@ if __name__ == '__main__':
                     continue
                 else:
                     break
+
 
         except ValueError as e:
             print("Error! Please enter a number.")
