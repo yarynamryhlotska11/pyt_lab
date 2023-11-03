@@ -1,8 +1,9 @@
-
-from rectangle_art import *
+import os
+import shutil
+from yar import *
 
 if __name__ == '__main__':
-    console_length = 360
+    console_length = 400
 
     while True:
         print("Menu:")
@@ -49,7 +50,7 @@ if __name__ == '__main__':
             print()  # Розділювач
 
             while True:
-                color_option = input("Do you want to use one or three colors for the shape? (1-only one or 3- three different): ")
+                color_option = input("Do you want to use one or three colors for the shape? (enter 1 or 3): ")
                 if color_option not in ["1", "3"]:
                     print("Error: Incorrect selection. Please choose the correct option.")
                     continue
@@ -96,9 +97,9 @@ if __name__ == '__main__':
 
                 if manipulate_choice == "yes":
 
-                    manipulation_type = input("Enter the type of change: 1-scale, 2-reverse_scale_figure: ")
+                    manipulation_type = input("Enter the type of change: scale, reverse_scale_figure: ")
 
-                    if manipulation_type == "1":
+                    if manipulation_type == "scale":
 
                         scale_factor = float(input("Enter the scale factor: "))
 
@@ -106,7 +107,7 @@ if __name__ == '__main__':
 
                         rectangle_art.draw_combined_rectangles()
 
-                    elif manipulation_type == "2":
+                    elif manipulation_type == "reverse_scale_figure":
 
                         scale_factor = float(input("Enter the scale factor: "))
 
