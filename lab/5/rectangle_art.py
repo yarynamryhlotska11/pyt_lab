@@ -74,7 +74,6 @@ class RectangleArt:
                         rectangle[i][j] = ' '
         return rectangle
 
-
     def resize_matrix(self, matrix):
         for row in matrix:
             row.extend([Fore.WHITE + ' '] * (self.width * 3 - 1))
@@ -156,7 +155,6 @@ class RectangleArt:
         self.outer_rectangle = self.generate_outer_rectangle()
         self.middle_rectangles = self.generate_middle_rectangles()
         self.inner_rectangle = self.generate_inner_rectangle()
-
 
     def align_art(self, alignment, console_length):
         combined_matrix = self.combine_rectangles()

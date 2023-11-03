@@ -2,7 +2,7 @@
 from rectangle_art import *
 
 if __name__ == '__main__':
-    console_length = 360
+    console_length = 400
 
     while True:
         print("Menu:")
@@ -14,11 +14,9 @@ if __name__ == '__main__':
 
         if choice == "3":
             break
-
         if choice not in ["1", "2"]:
             print("Error: Incorrect selection. Please choose the correct option.")
             continue
-
         if choice in ["1", "2"]:
             if choice == "1":
                 while True:
@@ -31,7 +29,6 @@ if __name__ == '__main__':
                             break
                     except ValueError:
                         print("Error: Please enter a valid number.")
-
             if choice == "2":
                 while True:
                     length = input("Enter the length of the parallelepiped (must be a number greater than or equal to 4): ")
@@ -45,9 +42,7 @@ if __name__ == '__main__':
                             break
                     except ValueError:
                         print("Error: Please enter a valid number.")
-
-            print()  # Розділювач
-
+            print()
             while True:
                 color_option = input("Do you want to use one or three colors for the shape? (1-only one or 3- three different): ")
                 if color_option not in ["1", "3"]:
@@ -55,7 +50,6 @@ if __name__ == '__main__':
                     continue
                 else:
                     break
-
             if color_option == "1":
                 color_choice = input(f"Choose a color for the shape from the list {list(colors.values())}: ")
                 if color_choice not in colors.values():
@@ -65,15 +59,12 @@ if __name__ == '__main__':
                     rectangle_art = RectangleArt(length, length, outer_color=color_choice, middle_color=color_choice, inner_color=color_choice)
                 elif choice == "2":
                     rectangle_art = RectangleArt(length, width, outer_color=color_choice, middle_color=color_choice, inner_color=color_choice)
-
             elif color_option == "3":
                 if choice == "1":
                     rectangle_art = RectangleArt(length, length, outer_color='BLUE', middle_color='MAGENTA', inner_color='RED')
                 elif choice == "2":
                     rectangle_art = RectangleArt(length, width, outer_color='BLUE', middle_color='MAGENTA', inner_color='RED')
-
-            print()  # Розділювач
-
+            print()
             while True:
                 alignment = input("Select alignment (left, center, right): ")
                 if alignment not in ["left", "center", "right"]:
@@ -89,52 +80,29 @@ if __name__ == '__main__':
                         print("Right alignment:")
                         rectangle_art.align_art(alignment, console_length)
                     break
-
             while True:
-
                 manipulate_choice = input("Do you want to change your figure? (yes or no): ").lower()
-
                 if manipulate_choice == "yes":
-
                     manipulation_type = input("Enter the type of change: 1-scale, 2-reverse_scale_figure: ")
-
                     if manipulation_type == "1":
-
                         scale_factor = float(input("Enter the scale factor: "))
-
                         rectangle_art.scale_figure(scale_factor)
-
                         rectangle_art.draw_combined_rectangles()
-
                     elif manipulation_type == "2":
-
                         scale_factor = float(input("Enter the scale factor: "))
-
                         rectangle_art.reverse_scale_figure(scale_factor)
-
                         rectangle_art.draw_combined_rectangles()
-
                     else:
-
                         print("Error: Invalid change type.")
-
                 else:
-
                     break
-
             convert_2D = input("Want to turn 3D art into 2D? (yes or no): ").lower()
-
             if convert_2D == "yes":
                 rectangle_art.convert_to_2d()
-
             save_choice = input("Do you want to save the generated ASCII art to a file? (yes or no): ").lower()
-
             if save_choice == "yes":
                 file_name = input("Enter a file name to save the ASCII art: ")
-
                 rectangle_art.save_to_file(file_name)
-
             continue_choice = input("Do you want to continue drawing? (yes or no): ").lower()
-
             if continue_choice != "yes":
                 break
