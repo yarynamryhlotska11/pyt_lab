@@ -41,9 +41,5 @@ def write_into_csv(file_path: str, data: dict) -> None:
 
 class CsvProcessor:
     def read(file_path: str) -> pandas.DataFrame:
-        """
-        Read a CSV file into a pandas DataFrame. May raise FileNotFoundError, PermissionError, or OSError.
-        :param file_path:
-        :return:
-        """
+
         return pandas.read_csv(file_path)

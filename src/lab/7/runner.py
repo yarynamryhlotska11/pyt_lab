@@ -63,8 +63,6 @@ def main():
                 print("1. Save into a txt file")
                 print("2. Save into a jsons file")
                 print("3. Save into a csv file")
-
-
                 inner_option = input("Your choice: ")
                 if inner_option == "1":
                     FileProcessor.write_into_file("./files/result.txt", user_profile_info)
@@ -76,7 +74,7 @@ def main():
                     print("No data to save!")
         elif option == "0":
             exit(0)
-        else :
+        else:
             print("Invalid option. Enter again!")
 
 
