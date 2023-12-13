@@ -2,7 +2,7 @@ from service import ConsumerServiceImpl
 
 
 def main():
-    data_file = "./files/consumers.csv"
+    data_file = "../../data/lab9/users.csv"
     service = ConsumerServiceImpl(data_file)
 
     while True:

@@ -1,0 +1,13 @@
+{
+  "ASCII_ART_GENERATOR": "./data/lab3/output.txt",
+  "ASCII_ART_GENERATOR_OUTPUT": "./data/lab4/output.txt",
+  "OWN_ASCII_ART_GENERATOR_OUTPUT_FONT": "./data/lab4/fori.txt",
+  "JSON_FILE_PATH": "./data/lab4/result.json",
+  "FIGURE_2D": "./data/lab5/2d.txt",
+  "FIGURE_3D": "./data/lab5/3d.txt",
+  "STATES_HISTOGRAM": "./data/lab8/state-histogram.png",
+  "PIE_CHART_PHOTO": "./data/lab8/pie-chart.png",
+  "COMBINED_DIAGRAM_PHOTO": "./data/lab8/combined-diagram.png",
+  "USERS_DATA": "./data/lab9/users.csv",
+  "HTML_DATA": "./docs/_build/html/"
+}
