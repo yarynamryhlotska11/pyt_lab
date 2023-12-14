@@ -1,3 +1,9 @@
+"""
+Module: user_interface.menu.lab5.figures_generator
+A module for handling 3D figures and their representations.
+Classes:
+- FigureMenu: A menu class for managing 3D figures and their representations.
+"""
 from service.lab5.generate_figures_service import Figure3D, Cube
 from shared.color_font_processor import colors, ColorProcessor
 from shared.file_processors import FileProcessor
@@ -9,7 +15,11 @@ class FigureMenu(Menu):
     """Menu class for managing 3D figures and their representations."""
 
     def __init__(self):
-        """Initialize FigureMenu class."""
+        """
+        Initialize FigureMenu class.
+        Initializes various flags and variables for figure and representation availability.
+        Retrieves file paths for 2D and 3D representations from paths_config.json.
+        """
         self.__is_figure_available = False
         self.__is_2d_representation_available = False
         self.__is_3d_representation_available = False
@@ -90,6 +100,10 @@ class FigureMenu(Menu):
             print("There is no figure available!")
 
     def __display_3d(self):
+        """
+        Display the 3D representation of the figure.
+        If a figure is available, this method retrieves and prints its 3D representation based on the given scale.
+        """
         if self.__is_figure_available is True:
             representation_3d = self.__figure.get_3d_representation(scale=self.__get_scale_input())
             print(representation_3d)
@@ -98,6 +112,10 @@ class FigureMenu(Menu):
             print("There is no figure available!")
 
     def __save_2d_representation(self):
+        """
+        Save the 2D representation of the figure to a file.
+        If a 2D representation is available, it attempts to save it to the specified file path.
+        """
         if self.__is_2d_representation_available is True:
             try:
                 FileProcessor.write_into_file(self.__representation_2d_file, ""
@@ -110,6 +128,10 @@ class FigureMenu(Menu):
             print("There is no figure available!")
 
     def __save_3d_representation(self):
+        """
+        Save the 3D representation of the figure to a file.
+        If a 3D representation is available, it attempts to save it to the specified file path based on the given scale.
+        """
         if self.__is_3d_representation_available is True:
             try:
                 FileProcessor.write_into_file(
@@ -124,11 +146,11 @@ class FigureMenu(Menu):
 
     def run(self):
         while True:
-            print("1 - Create a cube")
-            print("2 - Display 2D")
-            print("3 - Display 3D")
-            print("4 - Save 2D")
-            print("5 - Save 3D")
+            print("1 - Create figure")
+            print("2 - Display figure in 2D")
+            print("3 - Display figure in 3D")
+            print("4 - Save figure in 2D")
+            print("5 - Save figure in 3D")
             print("0 - Exit")
             option = str(input("Enter an option: "))
 

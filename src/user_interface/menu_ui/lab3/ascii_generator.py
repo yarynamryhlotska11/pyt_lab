@@ -1,3 +1,11 @@
+"""
+Module docstring for user_interface.menu.lab3.ascii_generator
+
+Module for implementing a simple menu for an ASCII art generator.
+
+This module contains the `AsciiArtGeneratorMenu` class, providing a menu for an ASCII art generator.
+Users can run the program to generate ASCII art based on the provided text.
+"""
 from service.lab3.ascii_generator_service import AsciiArtGeneratorService
 from user_interface.menu_builder import Menu
 

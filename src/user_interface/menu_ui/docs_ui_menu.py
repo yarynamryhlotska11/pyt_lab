@@ -1,3 +1,11 @@
+"""
+Module: interactive_docs_ui_menu
+
+This module provides a text-based interactive menu for navigating through HTML documentation.
+
+Classes:
+    - DocsMenu: Provides a text-based interactive menu for navigating through HTML documentation.
+"""
 from service.docs_service import DocsService
 
 

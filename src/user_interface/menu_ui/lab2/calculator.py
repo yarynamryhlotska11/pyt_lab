@@ -1,3 +1,4 @@
+"""Module for implementing a calculator menu."""
 from service.lab2.calculator_service import CalculatorService
 from user_interface.menu_builder import Menu
 

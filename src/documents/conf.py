@@ -5,19 +5,23 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+import os
+import sys
 
-project = 'Project_labs'
-copyright = '2023, Yaryna_Mryhlotska'
-author = 'Yaryna_Mryhlotska'
-release = '14.12.23'
+sys.path.insert(0, os.path.abspath('../../src'))
+
+project = 'Project labs'
+copyright = '2023, Yaryna Mryhlotska'
+author = 'Yaryna Mryhlotska'
+release = '1.0.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = ["sphinx.ext.autodoc", "sphinx.ext.napoleon"]
 
 templates_path = ['_templates']
-exclude_patterns = []
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 
 

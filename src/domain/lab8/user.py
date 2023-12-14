@@ -1,3 +1,23 @@
+"""
+User Domain Module
+
+This module defines the `User` class representing a user with various attributes.
+
+Attributes:
+__first_name (str): The first name of the user.
+__last_name (str): The last name of the user.
+__company_name (str): The company name of the user.
+__address (str): The address of the user.
+ __city (str): The city of the user.
+__country (str): The country of the user.
+__state (str): The state of the user.
+__zip (str): The ZIP code of the user.
+__phone1 (str): The first phone number of the user.
+__phone2 (str): The second phone number of the user.
+__email (str): The email address of the user.
+"""
+
+
 class User:
     """
     The User class represents a user entity with attributes such as first name, last name, company name, address, city,

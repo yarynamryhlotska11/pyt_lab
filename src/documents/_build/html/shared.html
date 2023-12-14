@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>shared package &#8212; Project labs 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />
+    <script src="_static/documentation_options.js?v=8d563738"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="user_interface package" href="user_interface.html" />
+    <link rel="prev" title="service.lab8 package" href="service.lab8.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="shared-package">
+<h1>shared package<a class="headerlink" href="#shared-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-shared.color_font_processor">
+<span id="shared-color-font-processor-module"></span><h2>shared.color_font_processor module<a class="headerlink" href="#module-shared.color_font_processor" title="Link to this heading">¶</a></h2>
+<p>Color Processor Module</p>
+<p>This module provides functionality for color processing using the <cite>colorama</cite>
+library and font options using the <cite>pyfiglet</cite> library.
+It initializes colorama, enumerates available colors and fonts, and
+offers functions to display color and font options.</p>
+<p>Functions:
+- <cite>display_colors() -&gt; None:</cite>: Displays a numbered list of available color options.
+- <cite>display_fonts() -&gt; None:</cite>: Displays a numbered list of available font options.</p>
+<p>Usage:
+1. Import the module: <cite>import shared.color_font_processor</cite>
+2. Use the provided functions to display color and font options.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="shared.color_font_processor.ColorProcessor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">shared.color_font_processor.</span></span><span class="sig-name descname"><span class="pre">ColorProcessor</span></span><a class="headerlink" href="#shared.color_font_processor.ColorProcessor" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Color Processor Class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="shared.color_font_processor.ColorProcessor.display_colors">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">display_colors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#shared.color_font_processor.ColorProcessor.display_colors" title="Link to this definition">¶</a></dt>
+<dd><p>Displays available color options.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="shared.color_font_processor.FontProcessor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">shared.color_font_processor.</span></span><span class="sig-name descname"><span class="pre">FontProcessor</span></span><a class="headerlink" href="#shared.color_font_processor.FontProcessor" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Font Processor Class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="shared.color_font_processor.FontProcessor.display_fonts">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">display_fonts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#shared.color_font_processor.FontProcessor.display_fonts" title="Link to this definition">¶</a></dt>
+<dd><p>Displays available font options.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-shared.data_processor">
+<span id="shared-data-processor-module"></span><h2>shared.data_processor module<a class="headerlink" href="#module-shared.data_processor" title="Link to this heading">¶</a></h2>
+<p>Data Processor Module</p>
+<p>This module provides a DateProcessor class for handling date-related operations.</p>
+<p>Methods:
+- parse_dateformat(date: str, date_format: str) -&gt; datetime:</p>
+<blockquote>
+<div><p>Parses the input date string using the specified format and
+returns a datetime object.</p>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>calculate_year_difference(dt: datetime) -&gt; int:</dt><dd><p>Calculates the difference in years between the input date and
+the current date.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="py class">
+<dt class="sig sig-object py" id="shared.data_processor.DateProcessor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">shared.data_processor.</span></span><span class="sig-name descname"><span class="pre">DateProcessor</span></span><a class="headerlink" href="#shared.data_processor.DateProcessor" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>DateProcessor class for handling date-related operations.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="shared.data_processor.DateProcessor.parse_dateformat">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_dateformat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">date_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">datetime</span></span></span><a class="headerlink" href="#shared.data_processor.DateProcessor.parse_dateformat" title="Link to this definition">¶</a></dt>
+<dd><p>Parses the input date string using the specified format and returns a datetime object.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="shared-file-processors-module">
+<h2>shared.file_processors module<a class="headerlink" href="#shared-file-processors-module" title="Link to this heading">¶</a></h2>
+</section>
+<section id="shared-html-processor-module">
+<h2>shared.html_processor module<a class="headerlink" href="#shared-html-processor-module" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-shared.json_utility">
+<span id="shared-json-utility-module"></span><h2>shared.json_utility module<a class="headerlink" href="#module-shared.json_utility" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="shared.json_utility.read_json_file">
+<span class="sig-prename descclassname"><span class="pre">shared.json_utility.</span></span><span class="sig-name descname"><span class="pre">read_json_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#shared.json_utility.read_json_file" title="Link to this definition">¶</a></dt>
+<dd><p>Reads a JSON file and returns its contents as a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<em>str</em>) – The path to the JSON file.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary containing the data from the JSON file.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>FileNotFoundError</strong> – If the specified file path does not exist.</p></li>
+<li><p><strong>json.JSONDecodeError</strong> – If the file does not contain valid JSON data.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p>file_path = ‘data.json’
+data = read_json_file(file_path)</p>
+</dd></dl>
+
+</section>
+<section id="module-shared">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-shared" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Project labs</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="domain.html">domain package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">src</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="domain.html">domain package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runner.html">runner module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="service.html">service package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">shared package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_interface.html">user_interface package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="service.html">service package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">shared package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-shared.color_font_processor">shared.color_font_processor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-shared.data_processor">shared.data_processor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shared-file-processors-module">shared.file_processors module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shared-html-processor-module">shared.html_processor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-shared.json_utility">shared.json_utility module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-shared">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_interface.html">user_interface package</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">src</a><ul>
+      <li>Previous: <a href="service.lab8.html" title="previous chapter">service.lab8 package</a></li>
+      <li>Next: <a href="user_interface.html" title="next chapter">user_interface package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Yaryna Mryhlotska.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/shared.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

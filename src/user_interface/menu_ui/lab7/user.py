@@ -1,3 +1,12 @@
+"""
+Module: UserMenu
+
+This module defines a menu class for interacting with user data. It includes options to display
+personal profile data, display profiles posts, save data in JSON format, show history, and exit.
+
+Classes:
+- UserMenu: A menu class for interacting with user data.
+"""
 import json
 
 from service.lab7.user_service import DisplayInTableService, UserService

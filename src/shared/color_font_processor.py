@@ -11,7 +11,7 @@ Functions:
 - `display_fonts() -> None:`: Displays a numbered list of available font options.
 
 Usage:
-1. Import the module: `import shared.color_processor`
+1. Import the module: `import shared.color_font_processor`
 2. Use the provided functions to display color and font options.
 """
 import colorama
@@ -26,9 +26,15 @@ fonts = dict(enumerate(sorted(pyfiglet.FigletFont.getFonts())))
 
 
 class ColorProcessor:
+    """
+    Color Processor Class
+    """
 
     @staticmethod
     def display_colors() -> None:
+        """
+        Displays available color options.
+        """
 
         logger.info("Displaying all colors")
         for i in colors:
@@ -36,9 +42,15 @@ class ColorProcessor:
 
 
 class FontProcessor:
+    """
+    Font Processor Class
+    """
 
     @staticmethod
     def display_fonts() -> None:
+        """
+        Displays available font options.
+        """
         logger.info("Displaying all fonts")
         for i in fonts:
             print(str(i) + ". " + fonts[i])

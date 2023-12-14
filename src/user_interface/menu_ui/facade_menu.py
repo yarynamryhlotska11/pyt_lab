@@ -1,3 +1,6 @@
+"""
+The module provides a text-based interactive menu for navigating through HTML documentation.
+"""
 import os
 from user_interface.menu_ui.docs_ui_menu import DocsMenu
 from user_interface.menu_ui.lab2.calculator import CalculatorMenu

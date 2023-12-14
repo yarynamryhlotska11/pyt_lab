@@ -1,3 +1,12 @@
+"""
+Menu Diagrams Module
+
+This module defines the `DiagramMenu` class, representing a
+ menu for displaying diagrams.
+
+Note: Ensure the required libraries (`sys`) are
+installed before using this module.
+"""
 from service.lab8.diagrams_service import DiagramServiceImpl
 from shared.json_utility import read_json_file
 from user_interface.menu_builder import Menu
