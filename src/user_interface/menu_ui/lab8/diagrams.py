@@ -6,16 +6,16 @@ from user_interface.menu_builder import Menu
 class DiagramMenu(Menu):
     """Menu class for managing diagram creation and display.
 
-        This class presents a menu system to create and display different types of diagrams
-        using the DiagramServiceImpl. Users can select options to display state histograms,
-        pie charts, or complicated diagrams.
+    This class presents a menu system to create and display different types of diagrams
+    using the DiagramServiceImpl. Users can select options to display state histograms,
+    pie charts, or complicated diagrams.
 
-        Attributes:None
+    Attributes:None
 
-        Methods:
-            run(): Runs the menu system for diagram creation and display.
-            display_diagram(diagram_function): Displays the chosen diagram based on the provided function.
-        """
+    Methods:
+        run(): Runs the menu system for diagram creation and display.
+        display_diagram(diagram_function): Displays the chosen diagram based on the provided function.
+    """
 
     def run(self):
         """Run the menu system for managing diagram creation and display."""
@@ -24,7 +24,7 @@ class DiagramMenu(Menu):
 
         while True:
             print(
-                "1. Display  state histogram\n"
+                "1. Display state histogram\n"
                 "2. Display pie chart\n"
                 "3. Display complicated diagram\n"
                 "0. Exit\n"

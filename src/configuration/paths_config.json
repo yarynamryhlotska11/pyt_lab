@@ -8,5 +8,5 @@
   "PIE_CHART_PHOTO": "./data/lab8/pie-chart.png",
   "COMBINED_DIAGRAM_PHOTO": "./data/lab8/combined-diagram.png",
   "USERS_DATA": "./data/lab9/users.csv",
-  "HTML_DATA": "./docs/_build/html/"
+  "HTML_DATA": "./documents/_build/html/"
 }

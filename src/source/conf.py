@@ -6,10 +6,10 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Project_documentation'
+project = 'Project_labs'
 copyright = '2023, Yaryna_Mryhlotska'
 author = 'Yaryna_Mryhlotska'
-release = '14.12.2023'
+release = '14.12.23'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

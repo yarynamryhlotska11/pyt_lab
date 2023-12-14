@@ -11,27 +11,29 @@ from shared.json_utility import read_json_file
 class MenuFacade:
     """Facade class for managing different menus in the application.
 
-        The MenuFacade class acts as a central hub for accessing and navigating through various menus
-        available in the application. It offers options to access different functionalities via specific
-        menu choices.
+    The MenuFacade class acts as a central hub for accessing and navigating through various menus
+    available in the application. It offers options to access different functionalities via specific
+    menu choices.
 
-        Attributes: None
+    Attributes: None
 
-        Methods:
-            print_menu_options(): Prints the available menu options for user selection.
-            start(): Begins the menu interaction process by prompting user input for menu choices.
-        """
+    Methods:
+        print_menu_options(): Prints the available menu options for user selection.
+        start(): Begins the menu interaction process by prompting user input for menu choices.
+    """
 
     def __init__(self):
         """Initialize the MenuFacade object."""
         read_json_file("configuration/paths_config.json")
         json_data = read_json_file(file_path="../src/configuration/paths_config.json")
-        self.__menus = [("Calculator", CalculatorMenu()),
-                        ("AsciiArtGeneratorMenu", AsciiArtGeneratorMenu()),
-                        ("FigureMenu", FigureMenu()),
-                        ("UserMenu", UserMenu()),
-                        ("DiagramMenu", DiagramMenu()),
-                        ("DocsMenu", DocsMenu(os.path.abspath(json_data["HTML_DATA"])))]
+        self.__menus = [
+            ("Calculator", CalculatorMenu()),
+            ("AsciiArtGeneratorMenu", AsciiArtGeneratorMenu()),
+            ("FigureMenu", FigureMenu()),
+            ("UserMenu", UserMenu()),
+            ("DiagramMenu", DiagramMenu()),
+            ("DocsMenu", DocsMenu(os.path.abspath(json_data["HTML_DATA"]))),
+        ]
 
         self.__finish_number = 0
 

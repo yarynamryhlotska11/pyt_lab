@@ -1,11 +1,3 @@
-"""
-Module: user_interface.menu.lab5.figures_generator
-
-A module for handling 3D figures and their representations.
-
-Classes:
-- FigureMenu: A menu class for managing 3D figures and their representations.
-"""
 from service.lab5.generate_figures_service import Figure3D, Cube
 from shared.color_font_processor import colors, ColorProcessor
 from shared.file_processors import FileProcessor

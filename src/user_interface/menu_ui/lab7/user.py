@@ -9,15 +9,15 @@ from user_interface.menu_builder import Menu
 class UserMenu(Menu):
     """Menu class for managing user data operations.
 
-        This class presents a menu system to perform operations related to user data. It interacts
-        with the UserService and DisplayInTableService classes to retrieve user data, display it in
-        different formats (table or JSON), and save the data as JSON files.
+    This class presents a menu system to perform operations related to user data. It interacts
+    with the UserService and DisplayInTableService classes to retrieve user data, display it in
+    different formats (table or JSON), and save the data as JSON files.
 
-        Attributes: None
+    Attributes: None
 
-        Methods:
-            run(): Runs the menu system to manage user data operations.
-        """
+    Methods:
+        run(): Runs the menu system to manage user data operations.
+    """
     def run(self):
         """Run the menu system for managing user data operations."""
         history: list = []  # List to store history of performed operations
@@ -69,8 +69,7 @@ class UserMenu(Menu):
                         json_data = read_json_file(file_path="../src/configuration/paths_config.json")
                         FileProcessor.write_into_json(json_data["JSON_FILE_PATH"], jsons)
                     except Exception as e:
-                        (
-                            print(e))
+                        print(e)
                 else:
                     print("No data to save!")
             elif option == "0":

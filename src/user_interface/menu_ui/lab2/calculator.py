@@ -1,18 +1,21 @@
-"""
-The 'CalculatorMenu' class offers a menu-driven interface for a calculator application. It utilizes functionalities from
- the 'CalculatorService' class to perform calculations based on user input.
-The 'CalculatorMenu' class inherits from the abstract base class 'Menu' and implements a user interface for a calculator
- system.
-"""
 from service.lab2.calculator_service import CalculatorService
 from user_interface.menu_builder import Menu
 
 
 class CalculatorMenu(Menu):
-    """A simple calculator menu class."""
+    """
+    The 'CalculatorMenu' class offers a menu-driven interface for a calculator application. It utilizes functionalities
+    from the 'CalculatorService' class to perform calculations based on user input.
+    The 'CalculatorMenu' class inherits from the abstract base class 'Menu' and implements a user interface for a
+    calculator system.
+    """
 
     def run(self):
-        """Run the calculator program."""
+        """
+        Run the calculator program.
+
+        Initializes the 'CalculatorService' and runs the calculator menu in a loop until the user chooses to exit.
+        """
         calculator_service = CalculatorService()
 
         while True:
