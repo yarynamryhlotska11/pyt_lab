@@ -1,5 +1,5 @@
 from service.lab5.figures_service import Figure3D, Cube
-from shared.color_processor import colors, ColorProcessor
+from shared.color_font_processor import colors, ColorProcessor
 from shared.file_processors import FileProcessor
 from shared.json_utility import read_json_file
 from ui.menu_builder import Menu

@@ -1,6 +1,6 @@
 import pyfiglet
 from colorama import Fore
-from shared.color_processor import colors, fonts, FontProcessor, ColorProcessor
+from shared.color_font_processor import colors, fonts, FontProcessor, ColorProcessor
 from shared.file_processors import FileProcessor
 from shared.json_utility import read_json_file
 

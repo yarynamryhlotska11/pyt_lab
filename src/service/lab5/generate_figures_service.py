@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 from colorama import Fore
 
-from shared.color_processor import colors
+from shared.color_font_processor import colors
 
 
 class Figure3D(ABC):
@@ -98,4 +98,3 @@ class Cube(Figure3D):
             result += "\n"
 
         return getattr(Fore, colors[self._color_position]) + "\n" + result
-
