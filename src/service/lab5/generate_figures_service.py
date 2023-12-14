@@ -1,17 +1,32 @@
+"""
+The `abc` module provides functionality for Abstract Base Classes, while the `colorama` module enables cross-platform
+colored terminal text output in Python.
 
+The `Figure3D` class represents an abstract base class for 3D figures and defines abstract methods for obtaining 2D and
+3D representations of the figure.
+The `Cube` class represents a specific 3D figure, inheriting from the Figure3D abstract base class.
+
+Example:
+         2  2  2  2  2  2
+      2              2  2
+   2              2     2
+2  2  2  2  2  2        2
+2              2        2
+2              2        2
+2              2     2
+2              2  2
+2  2  2  2  2  2
+"""
 from abc import ABC, abstractmethod
-
 from colorama import Fore
-
 from shared.color_font_processor import colors
 
 
 class Figure3D(ABC):
 
     def __init__(self, character: str, color_position: int):
-
         if not colors.__contains__(color_position):
-            raise ValueError("Color position must be in range of available colors")
+            raise ValueError("Position color have to be in range of available colors")
         if self.is_appropriate_character(character) is False:
             raise ValueError("It supposed to be only one character instead")
         self._character = character
@@ -20,12 +35,12 @@ class Figure3D(ABC):
     @abstractmethod
     def get_2d_representation(self) -> list:
 
-        pass  # pylint: disable=unnecessary-pass
+        pass
 
     @abstractmethod
     def get_3d_representation(self) -> str:
 
-        pass  # pylint: disable=unnecessary-pass
+        pass
 
     @staticmethod
     def is_appropriate_character(character: str) -> bool:

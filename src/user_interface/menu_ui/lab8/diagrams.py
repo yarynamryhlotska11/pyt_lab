@@ -1,10 +1,24 @@
 from service.lab8.diagrams_service import DiagramServiceImpl
 from shared.json_utility import read_json_file
-from ui.menu_builder import Menu
+from user_interface.menu_builder import Menu
+
 
 class DiagramMenu(Menu):
+    """Menu class for managing diagram creation and display.
+
+        This class presents a menu system to create and display different types of diagrams
+        using the DiagramServiceImpl. Users can select options to display state histograms,
+        pie charts, or complicated diagrams.
+
+        Attributes:None
+
+        Methods:
+            run(): Runs the menu system for diagram creation and display.
+            display_diagram(diagram_function): Displays the chosen diagram based on the provided function.
+        """
 
     def run(self):
+        """Run the menu system for managing diagram creation and display."""
         json_data = read_json_file(file_path="../src/configuration/paths_config.json")
         service = DiagramServiceImpl(json_data["USERS_DATA"])
 
@@ -30,6 +44,7 @@ class DiagramMenu(Menu):
 
     @staticmethod
     def display_diagram(diagram_function):
+        """Display the chosen diagram based on the provided function."""
         has_to_be_downloaded = input(
             "Do you want to download the diagram? Enter 'y' or "
             "anything else not to download: ") == "y"

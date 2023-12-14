@@ -2,7 +2,7 @@
 from colorama import Fore
 
 from configuration.logger_config import logger
-from shared import color_processor
+from shared import color_font_processor
 
 
 class JSONProcessor:

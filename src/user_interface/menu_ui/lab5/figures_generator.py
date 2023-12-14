@@ -1,22 +1,34 @@
-from service.lab5.figures_service import Figure3D, Cube
+"""
+Module: user_interface.menu.lab5.figures_generator
+
+A module for handling 3D figures and their representations.
+
+Classes:
+- FigureMenu: A menu class for managing 3D figures and their representations.
+"""
+from service.lab5.generate_figures_service import Figure3D, Cube
 from shared.color_font_processor import colors, ColorProcessor
 from shared.file_processors import FileProcessor
 from shared.json_utility import read_json_file
-from ui.menu_builder import Menu
+from user_interface.menu_builder import Menu
 
 
 class FigureMenu(Menu):
+    """Menu class for managing 3D figures and their representations."""
 
     def __init__(self):
+        """Initialize FigureMenu class."""
         self.__is_figure_available = False
         self.__is_2d_representation_available = False
         self.__is_3d_representation_available = False
         self.__figure = None
 
+        # Retrieving file paths for 2D and 3D representations from paths_config.json
         json_data = read_json_file(file_path="../src/configuration/paths_config.json")
         self.__representation_2d_file = json_data["FIGURE_2D"]
         self.__representation_3d_file = json_data["FIGURE_3D"]
 
+    # Helper methods for user input validation
     @staticmethod
     def __get_character_input():
         while True:
@@ -70,10 +82,10 @@ class FigureMenu(Menu):
         length = self.__get_length_input()
         try:
             self.__figure = Cube(length, character, color_position)
-            self.__is_figure_available = True
+            self.__is_figure_available = True  # Set flag if cube creation is successful
         except ValueError as e:
             print(e)
-            self.__is_figure_available = False
+            self.__is_figure_available = False  # Set flag if cube creation fails
 
     def __display_2d(self):
         """Display the 2D representation of the figure."""
@@ -141,4 +153,4 @@ class FigureMenu(Menu):
             elif option == "0":
                 break
             else:
-                print("Invalid option!")
+                print("Invalid option!")  # Inform users about invalid inputs

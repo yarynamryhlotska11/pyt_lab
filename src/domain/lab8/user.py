@@ -1,3 +1,20 @@
+"""
+The User class represents a user entity with attributes such as first name, last name, company name, address, city,
+country, state, ZIP code, phone numbers, and email.
+
+Usage:
+Instantiate the class by passing a list of user data.
+Access user attributes using the provided getter methods (e.g., user.first_name(), user.email()).
+
+Example:
+data = ['John', 'Doe', 'ABC Company', '123 Street', 'Anytown', 'Country', 'State', '12345', '123-456-7890',
+'987-654-3210', 'john@example.com']
+user = User(data)
+print(user.first_name())  # Output: John
+print(user.email())       # Output: john@example.com
+print(user)               # Output: John Doe ABC Company 123 Street Anytown Country State 12345 123-456-7890 987-654-3210 john@example.com
+"""
+
 
 class User:
     def __init__(self, data):
@@ -15,7 +32,6 @@ class User:
 
     @property
     def first_name(self):
-
         return self.__first_name
 
     @property
@@ -37,6 +53,7 @@ class User:
     @property
     def country(self):
         return self.__country
+
     @property
     def email(self):
         return self.__email
@@ -51,7 +68,7 @@ class User:
 
     @property
     def address(self):
-        return self._address
+        return self.__address
 
     @property
     def zip(self):

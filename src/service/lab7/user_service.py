@@ -1,10 +1,18 @@
+"""
+The `json` module provides functionality for encoding and decoding JSON data, while the `requests` module allows sending
+ HTTP requests. `prettytable` facilitates creating visually appealing ASCII tables. `regex` is used for regular
+ expression matching. Other modules contain configurations, logging setups, and shared utilities.
+
+The `UserService` class interacts with an external API to fetch personal profile data based on a given username.
+The `DisplayInTableService` class formats personal profile data into a visually organized table using the `
+PrettyTable` library.
+"""
 import json
 
 import requests
 from prettytable import PrettyTable
 import regex
 from configuration.logger_config import logger
-from shared import color_processor
 from shared.json_utility import read_json_file
 
 
@@ -47,6 +55,3 @@ class DisplayInTableService:
                 outer_table.add_row([key, value])
 
         return outer_table.get_string()
-
-
-

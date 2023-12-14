@@ -1,16 +1,29 @@
 import os
-from ui.menu.docs_menu import DocsMenu
-from ui.menu.lab2.calculator_menu import CalculatorMenu
-from ui.menu.lab3.ascii_art_generator_menu import AsciiArtGeneratorMenu
-from ui.menu.lab5.figures import FigureMenu
-from ui.menu.lab7.user_menu import UserMenu
-from ui.menu.lab8.diagrams_menu import DiagramMenu
+from user_interface.menu_ui.docs_ui_menu import DocsMenu
+from user_interface.menu_ui.lab2.calculator import CalculatorMenu
+from user_interface.menu_ui.lab3.ascii_generator import AsciiArtGeneratorMenu
+from user_interface.menu_ui.lab5.figures_generator import FigureMenu
+from user_interface.menu_ui.lab7.user import UserMenu
+from user_interface.menu_ui.lab8.diagrams import DiagramMenu
 from shared.json_utility import read_json_file
 
 
 class MenuFacade:
+    """Facade class for managing different menus in the application.
+
+        The MenuFacade class acts as a central hub for accessing and navigating through various menus
+        available in the application. It offers options to access different functionalities via specific
+        menu choices.
+
+        Attributes: None
+
+        Methods:
+            print_menu_options(): Prints the available menu options for user selection.
+            start(): Begins the menu interaction process by prompting user input for menu choices.
+        """
 
     def __init__(self):
+        """Initialize the MenuFacade object."""
         read_json_file("configuration/paths_config.json")
         json_data = read_json_file(file_path="../src/configuration/paths_config.json")
         self.__menus = [("Calculator", CalculatorMenu()),
@@ -23,12 +36,14 @@ class MenuFacade:
         self.__finish_number = 0
 
     def print_menu_options(self):
+        """Print the available menu options for user selection."""
 
         for index, (name, _) in enumerate(self.__menus, start=1):
             print(f"{index}. {name}")
         print(f"{self.__finish_number}. Exit")
 
     def start(self):
+        """Start the menu interaction process."""
 
         while True:
             self.print_menu_options()

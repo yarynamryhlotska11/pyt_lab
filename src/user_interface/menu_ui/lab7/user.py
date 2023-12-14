@@ -3,15 +3,26 @@ import json
 from service.lab7.user_service import DisplayInTableService, UserService
 from shared.file_processors import FileProcessor
 from shared.json_utility import read_json_file
-from ui.menu_builder import Menu
+from user_interface.menu_builder import Menu
 
 
 class UserMenu(Menu):
+    """Menu class for managing user data operations.
 
+        This class presents a menu system to perform operations related to user data. It interacts
+        with the UserService and DisplayInTableService classes to retrieve user data, display it in
+        different formats (table or JSON), and save the data as JSON files.
+
+        Attributes: None
+
+        Methods:
+            run(): Runs the menu system to manage user data operations.
+        """
     def run(self):
-        history: list = []
-        successful_result: bool = False
-        jsons: list = []
+        """Run the menu system for managing user data operations."""
+        history: list = []  # List to store history of performed operations
+        successful_result: bool = False  # Flag to track successful retrieval of user data
+        jsons: list = []  # List to store retrieved JSON data
 
         while True:
             print("Choose an option:")
@@ -45,7 +56,7 @@ class UserMenu(Menu):
                             print("Invalid option. Enter again!")
                 except ValueError as e:
                     print(e)
-                    successful_result = False
+                    successful_result = False  # Mark unsuccessful result
 
             elif option == "2":
                 if history.__len__() > 0 and successful_result:
@@ -53,7 +64,7 @@ class UserMenu(Menu):
                 else:
                     print("No data to save!")
             elif option == "3":
-                if successful_result:
+                if successful_result:  # Check if data is available to save
                     try:
                         json_data = read_json_file(file_path="../src/configuration/paths_config.json")
                         FileProcessor.write_into_json(json_data["JSON_FILE_PATH"], jsons)
@@ -63,6 +74,6 @@ class UserMenu(Menu):
                 else:
                     print("No data to save!")
             elif option == "0":
-                break
+                break  # Exit the menu system
             else:
-                print("Invalid option. Enter again!")
+                print("Invalid option. Enter again!")   # Inform users about invalid inputs
