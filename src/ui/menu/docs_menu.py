@@ -4,7 +4,6 @@ from service.docs_service import DocsService
 
 class DocsMenu:
 
-
     def __init__(self, folder_path: str):
 
         self.docs_service = DocsService(folder_path)

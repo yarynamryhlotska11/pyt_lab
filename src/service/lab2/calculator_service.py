@@ -23,7 +23,6 @@ class CalculatorService:
 
     @staticmethod
     def __is_operator_correct(operator):
-
         valid_operators = ('+', '-', '*', '/', '**', '√', '%')
         return operator in valid_operators
 
@@ -53,12 +52,6 @@ class CalculatorService:
         return result
 
     def __str__(self):
-        """
-        Returns a string representation of the CalculatorService object.
-
-        Returns:
-        - str: A string containing calculator service information.
-        """
         return f"CalculatorService: first_value={self.__first_value}, operator={self.__operator}," \
                f"second_value={self.__second_value}"
 

@@ -2,7 +2,6 @@ from service.lab8.diagrams_service import DiagramServiceImpl
 from shared.json_utility import read_json_file
 from ui.menu_builder import Menu
 
-
 class DiagramMenu(Menu):
 
     def run(self):

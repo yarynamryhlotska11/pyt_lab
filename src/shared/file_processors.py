@@ -35,9 +35,6 @@ class FileProcessor:
         if not isinstance(file_path, str):
             logger.critical("Wrong data type: %s. It has to be string!", type(file_path))
             raise TypeError("Type of file_path must be string")
-        if not isinstance(jsons, list):
-            logger.critical("Wrong data type: %s. It has to be list!", type(jsons))
-            raise TypeError("Type of jsons must be list")
 
         jsons_text_representation = json.dumps(jsons, indent=4)
         json.loads(jsons_text_representation)
@@ -45,6 +42,13 @@ class FileProcessor:
         with open(file_path, "w", encoding="utf-8") as file:
             logger.info("Writing into file %s", file_path)
             file.write(jsons_text_representation)
+
+    @staticmethod
+    def write_into_csv(file_path: str, data: dict) -> None:
+        fieldnames = data.keys()
+        filtered_fieldnames = [field for field in fieldnames if type(field) != dict or type(field) != list]
+
+        values = data.values()
 
 
 class CsvProcessor:

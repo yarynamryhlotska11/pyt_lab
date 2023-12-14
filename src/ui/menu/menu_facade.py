@@ -2,7 +2,6 @@ import os
 from ui.menu.docs_menu import DocsMenu
 from ui.menu.lab2.calculator_menu import CalculatorMenu
 from ui.menu.lab3.ascii_art_generator_menu import AsciiArtGeneratorMenu
-from ui.menu.lab4.own_ascii_art_generator import OwnAsciiArtGeneratorMenu
 from ui.menu.lab5.figures import FigureMenu
 from ui.menu.lab7.user_menu import UserMenu
 from ui.menu.lab8.diagrams_menu import DiagramMenu
@@ -16,7 +15,6 @@ class MenuFacade:
         json_data = read_json_file(file_path="../src/configuration/paths_config.json")
         self.__menus = [("Calculator", CalculatorMenu()),
                         ("AsciiArtGeneratorMenu", AsciiArtGeneratorMenu()),
-                        ("OwnAsciiArtGeneratorMenu", OwnAsciiArtGeneratorMenu()),
                         ("FigureMenu", FigureMenu()),
                         ("UserMenu", UserMenu()),
                         ("DiagramMenu", DiagramMenu()),

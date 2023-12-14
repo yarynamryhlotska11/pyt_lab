@@ -8,7 +8,6 @@ from shared.color_processor import colors
 
 class Figure3D(ABC):
 
-
     def __init__(self, character: str, color_position: int):
 
         if not colors.__contains__(color_position):
